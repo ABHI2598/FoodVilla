@@ -26,7 +26,7 @@ const Body = () =>{
         setRestaurants(json?.data?.cards[2]?.data?.data?.cards);
     }
     
-    if(allResturants.length === 0) return <Shimmers/>
+    //if(allResturants.length == 0) return <Shimmers/>
 
     return(
         <React.Fragment>
@@ -48,7 +48,7 @@ const Body = () =>{
               >Search</button>
           </div>
        
-       <div data-testid="res-list" className="grid grid-cols-4 space-x-1 hover:shadow-gray-900">
+       <div data-testid="res-list" className="grid grid-cols-5 space-x-1 hover:shadow-gray-900">
                {restaurants.map((resturant) => {
                     return (<Link to={"/resturants/" + resturant?.data.id}  key={resturant?.data.id}>
                                 <ResturantCards {...resturant.data} key={resturant.id} />

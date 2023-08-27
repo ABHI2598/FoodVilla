@@ -6,8 +6,11 @@ import UserContext from "../Context/UserContext";
 const ResturantCards = ({name,cuisines,cloudinaryImageId,slaString,avgRating})=>{
     const {user} = useContext(UserContext);
     return(
-       <div className="relative max-w-xs mb-4 bg-white border border-gray-200 rounded-xl shadow dark:bg-gray-800 dark:border-gray-700">
-            <img src={IMG_ID + cloudinaryImageId} alt="No Image" className="rounded-t-lg" />
+       <div className="relative max-w-xs mb-6 border rounded-xl shadow-lg bg-white overflow-hidden" >
+            <div className="rounded-tr-xl">
+            <img src={IMG_ID + cloudinaryImageId} alt="No Image" className="p-4" />
+            </div>
+            
             <h2 className="overflow-hidden font-bold break-words mt-2 ml-2">{name}</h2>
             
             <h4 className="mt-1 mb-2 font-medium text-sm text-slate-800 ml-2">{cuisines[0]}</h4>
